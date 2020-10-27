@@ -20,7 +20,7 @@ class SendSms {
         request.setVersion("2017-05-25");
         request.setAction("SendSms");
         request.putQueryParameter("RegionId", "cn-hangzhou");
-        request.putQueryParameter("PhoneNumbers", "1667779665565");
+        request.putQueryParameter("PhoneNumbers", "");
         request.putQueryParameter("SignName", "心诉星说");
         request.putQueryParameter("TemplateCode", "SMS_181861153");
         request.putQueryParameter("TemplateParam", "{\"code\":" + ru.randomId() + "}");
