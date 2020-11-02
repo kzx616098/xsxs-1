@@ -11,7 +11,7 @@ public class AuthCode {
         RandomUser ru = new RandomUser();
         Integer id = ru.randomId();
         String s = id.toString();
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4Fkcsm7BQij9BZGy7yeu", "g0HajyMArMqFCl2gUychv01o6waOdY");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
         IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
         request.setMethod(MethodType.POST);
@@ -21,7 +21,7 @@ public class AuthCode {
         request.putQueryParameter("RegionId", "cn-hangzhou");
         request.putQueryParameter("PhoneNumbers", phone);
         request.putQueryParameter("SignName", "心诉星说");
-        request.putQueryParameter("TemplateCode", "SMS_181861153");
+        request.putQueryParameter("TemplateCode", "SMS_");
         request.putQueryParameter("TemplateParam", "{\"code\":" + s + "}");
         try {
             CommonResponse response = client.getCommonResponse(request);
